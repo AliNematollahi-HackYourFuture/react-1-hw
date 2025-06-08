@@ -1,3 +1,5 @@
+import style from './page.module.css'
+
 const OurPartners = () => {
   // TASK - React 1 week 1
   // Create the "Our Crew section"
@@ -10,14 +12,16 @@ const OurPartners = () => {
         We collaborate with some of the most respected names in the space and
         technology industries to make every journey extraordinary.
       </p>
-      <img src="/business_partners/alphabet-logo.png" />
-      <img src="/business_partners/amazon_logo.png" />
-      <img src="/business_partners/CBC_Logo_White.png" />
-      <img src="/business_partners/Microsoft-Logo-white.png" />
-      <img src="/business_partners/nyu-logo.png" />
-      <img src="/business_partners/QueensLogo_white.png" />
-      <img src="/business_partners/samsung-logo.png" />
-      <img src="/business_partners/sodexo-logo.png" />
+      <div className={style.cardContainer}>
+        <img src="/business_partners/alphabet-logo.png" />
+        <img src="/business_partners/amazon_logo.png" />
+        <img src="/business_partners/CBC_Logo_White.png" />
+        <img src="/business_partners/Microsoft-Logo-white.png" />
+        <img src="/business_partners/nyu-logo.png" />
+        <img src="/business_partners/QueensLogo_white.png" />
+        <img src="/business_partners/samsung-logo.png" />
+        <img src="/business_partners/sodexo-logo.png" />
+      </div>
     </>
   );
 };

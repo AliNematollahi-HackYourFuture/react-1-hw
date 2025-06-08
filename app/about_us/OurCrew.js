@@ -1,3 +1,5 @@
+import style from './page.module.css'
+
 const OurCrew = () => {
   // TASK - React 1 week 1
   // Create the "Our Crew section"
@@ -41,11 +43,11 @@ const OurCrew = () => {
           unforgettable experience.
         </p>
       </div>
-      <div>
-        <img src="../crew/image-anousheh-ansari.png" />
-        <img src="../crew/image-douglas-hurley.png" />
-        <img src="../crew/image-mark-shuttleworth.png" />
-        <img src="../crew/image-victor-glover.png" />
+      <div className={style.cardContainer}>
+        <img src="/crew/image-anousheh-ansari.png" />
+        <img src="/crew/image-douglas-hurley.png" />
+        <img src="/crew/image-mark-shuttleworth.png" />
+        <img src="/crew/image-victor-glover.png" />
       </div>
     </section>
   );
