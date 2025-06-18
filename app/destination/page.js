@@ -12,8 +12,11 @@ import PlanetCard from "./PlanetCard";
 export const Destinations = () => {
   const [selectedPlanets, onAddPlanet] = useState([]);
 
-  let isPlanetSelected = false;
-  let numberOfPlanets = 0;
+  const [isPlanetSelected, setIsPlanetSelected] = useState(false);
+  const [numberOfPlanets, setNumberOfPlanets] = useState(0);
+
+  //let isPlanetSelected = false;
+  // numberOfPlanets = 0;
 
   const onAddOrRemovePlanet = (name, index) => {
     // TASK - React 1 week 2
@@ -23,12 +26,14 @@ export const Destinations = () => {
 
     if (selectedPlanets.includes(name)) {
       onAddPlanet((prevItems) => prevItems.filter((item) => item !== name));
-      isPlanetSelected = false;
-      numberOfPlanets -= 1;
+
+      setIsPlanetSelected(false);
+      setNumberOfPlanets(numberOfPlanets - 1);
     } else {
       onAddPlanet((prevItems) => [...prevItems, name]);
-      isPlanetSelected = true;
-      numberOfPlanets += 1;
+
+      setIsPlanetSelected(true);
+      setNumberOfPlanets(numberOfPlanets + 1);
     }
 
     console.log(
