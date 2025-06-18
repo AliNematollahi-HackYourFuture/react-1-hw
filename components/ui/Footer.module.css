@@ -45,4 +45,12 @@
 
 .footerList li {
   padding-block: var(--spacing-04);
+  margin: 5px;
+}
+
+
+.footerList img{
+  margin: 5px;
+  position: relative;
+  top: 10px;
 }
