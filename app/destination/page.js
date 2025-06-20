@@ -5,6 +5,7 @@ import { useState } from "react";
 import styles from "@/components/destination/destination.module.css";
 import { AddWishlistItem } from "@/components/destination/AddWishlistItem";
 import PlanetCard from "./PlanetCard";
+import { PlanetWishlistItem } from "./PlanetWishlistItem";
 
 // TASK - React 1 week 2
 // Move this to its own file
@@ -72,25 +73,27 @@ export const Destinations = () => {
           {/* STOP! - this is for week 3!*/}
           {/* TASK - React 1 week 3 */}
           {/* Import the AddWishlistItem react component */}
-          {/* <AddWishlistItem /> */}
+
+          <AddWishlistItem />
+
           {/* TASK - React 1 week 3 */}
           {/* Convert the list, so it is using selectedPlanets.map() to display the items  */}
           {/* Implement the "REMOVE" function */}
           {/* uncomment the following code snippet: */}
-          {/* 
+
           <h3>Your current wishlist</h3>
           <div className={styles.wishlistList}>
-            <PlanetWishlistItem 
-              name="europa"
-              onRemove={() => removeFromWishlist('europa')}
-              thumbnail="/destination/image-europa.png"
-            />
-            <PlanetWishlistItem 
-              name="europa"
-              onRemove={() => removeFromWishlist('europa')}
-              thumbnail="/destination/image-europa.png"
-            />
-          </div> */}
+            {selectedPlanets.map((planet) => {
+              return (
+                <PlanetWishlistItem
+                  name={planet}
+                  onRemove={() => removeFromWishlist(planet)}
+                  thumbnail={`/destination/image-${planet}.png`}
+                  key={planet}
+                />
+              );
+            })}
+          </div>
         </section>
         <section className="card">
           <h2>Possible destinations</h2>
